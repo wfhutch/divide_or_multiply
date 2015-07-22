@@ -19,16 +19,18 @@ function newValue(num) {
 	}
 }
 
+function clearInput() {
+	input.value = "";
+}
+
 function checkNumber() {
 	if (input.value === "") {
 		alert("Please enter a number into the box");
-	} 
-	if  (isNaN(input.value)) {
-		alert("Please enter a number only");
 	} else {
 		var newNumber = newValue(input.value);
-		document.getElementById("output").innerHTML = "<strong>" + "The new number is " + newNumber + "</strong>";
-	}
+		document.getElementById("output").innerHTML = "<strong>" + input.value + " is now " + newNumber + "!" + "</strong>";        
+	  }
+    clearInput();
 }
 
 button.onclick = checkNumber;

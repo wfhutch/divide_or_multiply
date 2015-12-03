@@ -1,5 +1,5 @@
 var input = document.getElementById("input");
-var button = document.getElementById("click");
+var button = document.getElementById("button");
 
 function divideTen(num) {
 	return num/10;
@@ -25,7 +25,7 @@ function clearInput() {
 
 function checkNumber() {
 	if (input.value === "") {
-		alert("Please enter a number into the box");
+		alert("Please enter a number into the box");	
 	} else {
 		var newNumber = newValue(input.value);
 		document.getElementById("output").innerHTML = "<strong>" + input.value + " is now " + newNumber + "!" + "</strong>";        
